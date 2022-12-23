@@ -1,0 +1,59 @@
+<html>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #006699;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+    p {
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+    a {
+      color: #006699;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const links = document.querySelectorAll("a");
+      links.forEach(link => {
+        link.addEventListener("mouseenter", function() {
+          this.style.color = "#ff9900";
+        });
+        link.addEventListener("mouseleave", function() {
+          this.style.color = "#006699";
+        });
+      });
+    });
+    
+  </script>
+<head>
+  <title>Welcome to My Website</title>
+</head>
+<body>
+  <h1>Welcome to My Website!</h1>
+  <p>Thank you for visiting. This is the homepage of my website, where you can learn more about me and the work that I do.</p>
+  <h2>About Me</h2>
+  <p>Hi there! My name is [Your Name] and I am a [Your profession/title]. I have always been interested in [Your interests] and I am passionate about [Your passions].</p>
+  <h2>My Work</h2>
+  <p>On this website, you can find out more about the [type of work you do] that I do. I have worked on a number of projects in the past, including [list some of your past projects].</p>
+  <h2>Contact Me</h2>
+  <p>If you have any questions or would like to get in touch, please don't hesitate to contact me. You can reach me at [Your email address] or through the contact form on this website.</p>
+  <p>Thanks again for visiting!</p>
+</body>
+</html>

@@ -4,28 +4,59 @@
   <title>Tic-Tac-Toe</title>
   <style>
     body {
-        font-family: Arial, sans-serif;
-        color: #333;
-        background-color: #ddd;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #333;
     }
-
-    h1 {
+    header {
+      background-color: #006699;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav li {
+      margin: 0 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    } 
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+    body > h1 {
         text-align: center;
         color: #333;
         padding: 0px;
         font-size: 32px;
     }
-
     h2 {
         text-align: center;
         color: #333;
         padding: 0px;
     }
-
     p {
         text-align: center;
     }
-
     table {
         border-collapse: collapse;
         margin: auto;
@@ -33,7 +64,6 @@
         box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.4);
         background-color: #B3E5FC; /* Light blue pastel tone */
     }
-
     td {
         width: 50px;
         height: 50px;
@@ -45,11 +75,9 @@
         padding: 10px;
         background-color: #F8BBD0; /* Pale pink pastel tone */
     }
-
     td:hover {
         background-color: #f9b3b3; /* Pale red pastel tone */
     }
-
     button {
     display: block;
     margin: 20px auto;
@@ -64,6 +92,20 @@
   
 </head>
 <body>
+
+
+  <header>
+    <h1><a href="/public/index.html" onclick="document.location='views/tictactoe.html';"></a>My Website</h1>
+    <nav>
+      <ul>
+        <li><a href="/public/views/tictactoe.html" onclick="document.location='views/tictactoe.html';">Tic Tac Toe</a></li>
+        <li><a href="/public/views/page2.html" onclick="document.location.hash='page2';">Page 2</a></li>
+        <li><a href="/public/views/page3.html" onclick="document.location.hash='page3';">Page 3</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
   <h1>Tic-Tac-Toe</h1>
   <h2>Score</h2>
   <div style="display: flex; justify-content: center;">

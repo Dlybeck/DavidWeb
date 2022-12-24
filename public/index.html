@@ -10,14 +10,29 @@
     <h1>David's Website</h1>
     <nav>
       <ul>
-        <li><a href="views/home.html">Home</a></li>
+        <li id="home"><a href="views/home.html">Home</a></li>
         <li><a href="views/tictactoe.html" onmousedown="play()">Tic Tac Toe 2</a></li>
       </ul>
     </nav>
   </header>
   <div class="container">
-
+    <div style="padding:20px;"> 
+      <h2>Welcome to My Website</h2>
+      <p>Thank you for visiting. You can now play Tic Tac Toe.</p>
+    </div>
   </div>
 </body>
 <script src="assets/script/tictactoe.js"></script>
+<script>
+  //initially load homepage onto website. then delete it when page is left
+  document.addEventListener('DOMContentLoaded', (event) => {
+    console.log("loaded")
+    document.querySelector("#home").addEventListener('mousedown', (event) => {
+      console.log("home clicked")
+      if(document.querySelector(".class").hasChildNodes()){
+        document.querySelector(".class").innerHTML = "";
+      }
+    });
+  });
+</script>
 </html>

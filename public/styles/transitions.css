@@ -1,3 +1,21 @@
+.transition-Home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    background-image: url("../img/PaperBackground.jpg");
+    background-position: 0px 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease-out;
+}
+.transition-Home.is-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
 .transition-1 {
     position: fixed;
     top: 0;
@@ -5,8 +23,8 @@
     right: 0;
     bottom: 0;
     z-index: 101;
-    background-image: url("../img/spaceBackground.jpg");
-    background-position: 3000px 2000px;
+    background-image: url("../img/PaperBackground.jpg");
+    background-position: -2000px -2000px;
     opacity: 0;
     pointer-events: none;
     transition: 0.25s ease-out;
@@ -23,31 +41,13 @@
     right: 0;
     bottom: 0;
     z-index: 101;
-    background-image: url("../img/spaceBackground.jpg");
-    background-position: 0px 0px;
+    background-image: url("../img/PaperBackground.jpg");
+    background-position: 2000px 2000px;
     opacity: 0;
     pointer-events: none;
     transition: 0.25s ease-out;
 }
 .transition-2.is-active {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.transition-3 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 101;
-    background-image: url("../img/spaceBackground.jpg");
-    background-position: 5000px 3000px;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.25s ease-out;
-}
-.transition-3.is-active {
     opacity: 1;
     pointer-events: all;
 }

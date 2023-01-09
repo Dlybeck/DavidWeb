@@ -12,6 +12,11 @@
       color: #333;
       padding: 0px;
     }
+
+    .transition-page {
+      background-position: -2000px -2000px;
+    }
+
     header {
       background-color: #006699;
       color: #fff;
@@ -96,14 +101,14 @@
 </head>
 <body>
 
-  <div class="transition transition-1 is-active"></div>
+  <div class="transition transition-page is-active"></div>
 
   <div class="page">
    <header>
     <h1 href='/index.html'>David's Website</h1>
     <nav>
       <ul>
-        <li><a href='/index.html'>Home</a></li>
+        <li><a href='/index.html' x="1" y="1">Home</a></li>
       </ul>
     </nav>
     </header>

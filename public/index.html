@@ -86,13 +86,6 @@
       cursor: pointer;
     }
 
-    .menu-toggler:hover + label,
-    .menu-toggler:hover + label:before,
-    .menu-toggler:hover + label:after{
-      background: #503f76;
-      opacity: 0.75;
-    }
-
     .menu-toggler:checked + label{
       background: transparent;
     } 
@@ -105,11 +98,11 @@
     }
 
     .menu-toggler:checked + label:before{
-      transform: rotate(45deg) translateY(5px) translateX(-5px);
+      transform: translateY(5px) translateX(-5px);
     }
 
     .menu-toggler:checked + label:after{
-      transform: rotate(-45deg) translateY(-5px) translateX(-5px);
+      transform: translateY(-5px) translateX(-5px);
     }
 
     .menu-toggler:checked ~ ul .menu-item{
@@ -117,26 +110,38 @@
     }
 
     .menu-toggler:checked ~ ul .menu-item:nth-child(1){
-      transform: rotate(15deg) translateX(-140px);
+      transform: rotate(0deg) translateX(-140px);
     }
 
     .menu-toggler:checked ~ ul .menu-item:nth-child(2){
-      transform: rotate(90deg) translateX(-130px);
+      transform: rotate(45deg) translateX(-140px) rotate(-45deg) ;
     }
     
     .menu-toggler:checked ~ ul .menu-item:nth-child(3){
-      transform: rotate(162deg) translateX(-130px);
+      transform: rotate(90deg) translateX(-140px) rotate(-90deg);
     }
 
     .menu-toggler:checked ~ ul .menu-item:nth-child(4){
-      transform: rotate(234deg) translateX(-140px);
+      transform: rotate(135deg) translateX(-140px) rotate(-135deg);
     }
 
     .menu-toggler:checked ~ ul .menu-item:nth-child(5){
-      transform: rotate(306deg) translateX(-140px);
+      transform: rotate(180deg) translateX(-140px) rotate(-180deg);
     }
 
-    .menu-toggler:checked ~ ul .menu-item a{
+    .menu-toggler:checked ~ ul .menu-item:nth-child(6){
+      transform: rotate(225deg) translateX(-140px) rotate(-225deg);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item:nth-child(7){
+      transform: rotate(270deg) translateX(-140px) rotate(-270deg);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item:nth-child(8){
+      transform: rotate(315deg) translateX(-140px) rotate(-315deg);
+    }
+
+    .menu-toggler:checked ~ ul .menu-item a + img{
       pointer-events: auto;
     }
 
@@ -180,26 +185,6 @@
       top:-15px;
     }
 
-    .menu-item:nth-child(1) a {
-      transform: rotate(-15deg);
-    }
-
-    .menu-item:nth-child(2) a {
-      transform: rotate(-90deg);
-    }
-
-    .menu-item:nth-child(3) a {
-      transform: rotate(-162deg);
-    }
-
-    .menu-item:nth-child(4) a {
-      transform: rotate(-234deg);
-    }
-
-    .menu-item:nth-child(5) a {
-      transform: rotate(-306deg);
-    }
-
     .menu-item {
       position: absolute;
       display: block;
@@ -213,32 +198,9 @@
       opacity: 0;
       transition: 0.5s;
     }
-
     .menu-item a{
-      display: block;
-      width: inherit;
-      height: inherit;
-      line-height: 95px;
-      border-radius: 50%;
-      font-size: 0px;
-      text-decoration: none;
-      text-align: center;
-      color: #e7e7f7;
-      background: #503f76;
-      pointer-events: none;
-      transition: 0.3s;
-      box-shadow: 6px 6px 27px -8px rgba(0, 0, 0, 0.61);
+      color: #006699;
     }
-
-    .menu-item a:hover{
-      box-shadow: 0 0 0 2px rgb(255, 255, 255);
-      color: white;
-      background: #ea0e54;
-      font-size: 40px;
-      box-shadow: 6px 6px 27px -8px rgba(0, 0, 0, 0.61);
-    }
-
-
   </style>
   <link rel="stylesheet" href="./styles/transitions.css"/>
 </head> 
@@ -267,30 +229,38 @@
         <label for="menu-toggler"></label>
         <ul>
           <li class="menu-item">
+            <img src='img/Arrows/Left.png'>
             <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
           </li>
           <li class="menu-item">
+            <img src='img/Arrows/TopLeft.png'>
             <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
           </li>
           <li class="menu-item">
+            <img src='img/Arrows/Top.png'>
             <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
           </li>
           <li class="menu-item">
+            <img src='img/Arrows/TopRight.png'>
             <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
           </li>
           <li class="menu-item">
+            <img src='img/Arrows/Right.png'>
+            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
+          </li>
+          <li class="menu-item">
+            <img src='img/Arrows/BottomRight.png'>
+            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
+          </li>
+          <li class="menu-item">
+            <img src='img/Arrows/Bottom.png'>
+            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
+          </li>
+          <li class="menu-item">
+            <img src='img/Arrows/BottomLeft.png'>
             <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
           </li>
         </ul>
-
-        <img src='img/Arrows/Bottom.png'>
-        <img src='img/Arrows/BottomLeft.png'>
-        <img src='img/Arrows/Left.png'>
-        <img src='img/Arrows/TopLeft.png'>
-        <img src='img/Arrows/Top.png'>
-        <img src='img/Arrows/TopRight.png'>
-        <img src='img/Arrows/Right.png'>
-        <img src='img/Arrows/BottomRight.png'>
     </div>
     </div>
   </div>

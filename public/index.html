@@ -98,7 +98,7 @@
     }
 
     .menu-toggler:checked ~ ul .menu-item{
-      opacity: 1;
+      display: block;
     }
 
     .menu-toggler:checked ~ ul .menu-item:nth-child(1){
@@ -179,7 +179,7 @@
 
     .menu-item {
       position: absolute;
-      display: block;
+      display: none;
       top: -15px;
       bottom: 0;
       left: 0;
@@ -187,7 +187,6 @@
       right: 0;
       width: 100px;
       height: 100px;
-      opacity: 0;
       transition: 0.5s;
     }
 

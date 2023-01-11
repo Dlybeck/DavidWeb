@@ -62,7 +62,7 @@
     h2 {
       text-align: center;
       color: #006699;
-      margin: 0px;
+      margin-top: 15px;
     }
     
     p {
@@ -71,128 +71,64 @@
       text-align: center;
     }
 
-    .menu-toggler {
+    .spacer{
+      height: 400px;
+    }
+
+    .menu {
+      position: relative;
+      margin-left: 39%;
+    }
+
+    .menu-item{
       position: absolute;
-      display: block;
-      top: 0;
       bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
-      width: 40px;
-      height: 40px;
-      z-index: 2;
-      opacity: 0;
-      cursor: pointer;
+      transition: 1s;
     }
 
-    .menu-toggler:checked + label{
-      background: transparent;
-    } 
-
-    .menu-toggler:checked + label:before,
-    .menu-toggler:checked + label:after{
-      top: 0px;
-      width: 50px;
-      transform-origin: 50% 50%;
-    }
-
-    .menu-toggler:checked ~ ul .menu-item{
-      display: block;
-    }
-
-    .menu-toggler:checked ~ ul .menu-item:nth-child(1){
-      transform: rotate(0deg) translateX(-140px);
-    }
-
-    .menu-toggler:checked ~ ul .menu-item:nth-child(2){
-      transform: rotate(45deg) translateX(-140px) rotate(-45deg) ;
-    }
-    
-    .menu-toggler:checked ~ ul .menu-item:nth-child(3){
-      transform: rotate(90deg) translateX(-140px) rotate(-90deg);
-    }
-
-    .menu-toggler:checked ~ ul .menu-item:nth-child(4){
-      transform: rotate(135deg) translateX(-140px) rotate(-135deg);
-    }
-
-    .menu-toggler:checked ~ ul .menu-item:nth-child(5){
-      transform: rotate(180deg) translateX(-140px) rotate(-180deg);
-    }
-
-    .menu-toggler:checked ~ ul .menu-item:nth-child(6){
-      transform: rotate(225deg) translateX(-140px) rotate(-225deg);
-    }
-
-    .menu-toggler:checked ~ ul .menu-item:nth-child(7){
-      transform: rotate(270deg) translateX(-140px) rotate(-270deg);
-    }
-
-    .menu-toggler:checked ~ ul .menu-item:nth-child(8){
-      transform: rotate(315deg) translateX(-140px) rotate(-315deg);
-    }
-
-    .menu-toggler:checked ~ ul .menu-item a + img{
-      pointer-events: auto;
-    }
-
-    .menu-toggler + label{
-      width: 40px;
-      height: 5px;
-      display: block;
-      z-index: 1;
-      border-radius: 2.5px;
-      background: #503f76;
-      transition: transform 0.5s top 0.5s;
-      position: absolute;
-      display: block;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-
-    .menu-toggler + label:before,
-    .menu-toggler + label:after{
-      width: 40px;
-      height: 5px;
-      display: block;
-      z-index: 1;
-      border-radius: 2.5px;
-      background: #503f76;
-      transition: transform 0.5s top 0.5s;
-      content: "";
-      position: absolute;
-      display: block;
-      left: 0;
-    }
-
-    .menu-toggler + label:before{
-      top:15px;
-    }
-
-    .menu-toggler + label:after{
-      top:-15px;
-    }
-
-    .menu-item {
-      position: absolute;
-      display: none;
-      top: -15px;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      right: 0;
+    .menu-item img{
       width: 100px;
       height: 100px;
-      transition: 0.5s;
     }
 
     .menu-item a{
-      color: #006699;
+      display: none;
     }
+
+    .menu-toggle:checked ~ ul .menu-item a{
+      display: block;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      z-index: 2;
+    }
+
+    .menu-toggle:checked ~ ul .menu-item:nth-child(1){
+      transform: rotate(0deg) translateX(-140px);
+    }
+    .menu-toggle:checked ~ ul .menu-item:nth-child(2){
+      transform: rotate(45deg) translateX(-140px) rotate(-45deg);
+    }
+    .menu-toggle:checked ~ ul .menu-item:nth-child(3){
+      transform: rotate(90deg) translateX(-140px) rotate(-90deg);
+    }
+    .menu-toggle:checked ~ ul .menu-item:nth-child(4){
+      transform: rotate(135deg) translateX(-140px) rotate(-135deg);
+    }
+    .menu-toggle:checked ~ ul .menu-item:nth-child(5){
+      transform: rotate(180deg) translateX(-140px) rotate(-180deg);
+    }
+    .menu-toggle:checked ~ ul .menu-item:nth-child(6){
+      transform: rotate(225deg) translateX(-140px) rotate(-225deg);
+    }
+    .menu-toggle:checked ~ ul .menu-item:nth-child(7){
+      transform: rotate(270deg) translateX(-140px) rotate(-270deg);
+    }
+    .menu-toggle:checked ~ ul .menu-item:nth-child(8){
+      transform: rotate(315deg) translateX(-140px) rotate(-315deg);
+    }
+    
   </style>
   <link rel="stylesheet" href="./styles/transitions.css"/>
 </head> 
@@ -212,12 +148,9 @@
       </nav>
     </header>
     <div class="container">
-      <div> 
-        <h2>Welcome to My Website</h2>
-        <p>Thank you for visiting. You can now play Tic Tac Toe.</p>
-      </div>
+      <div class="spacer"></div>
       <nav class="menu">
-        <input class="menu-toggler" type="checkbox">
+        <input class="menu-toggle" type="checkbox">
         <label for="menu-toggler"></label>
         <ul>
           <li class="menu-item">
@@ -254,6 +187,10 @@
           </li>
         </ul>
       </nav>
+      <div> 
+        <h2>Welcome to My Website</h2>
+        <p>Thank you for visiting. You can now play Tic Tac Toe.</p>
+      </div>
     </div>
     </div>
   </div>

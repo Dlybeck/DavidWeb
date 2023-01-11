@@ -77,13 +77,17 @@
 
     .menu {
       position: relative;
-      margin-left: 39%;
+      display: flex;
+      justify-content: center;
     }
 
     .menu-item{
-      position: absolute;
+      position: flex;
       bottom: 0;
       transition: 1s;
+      /**working but the code adjusting images on top of eachother (below)
+      is causing the center to be off screen since all the images are to the left
+      align-self: center;**/
     }
 
     .menu-item img{
@@ -100,9 +104,43 @@
     }
 
     .menu-toggle {
-      position: absolute;
-      z-index: 2;
+      position: flex;
+      z-index: 6;
     }
+
+    ul .menu-item:nth-child(1){
+      width: 100%;
+    }
+    ul .menu-item:nth-child(2){
+      width: 100%;
+      margin-left: -100%;
+    }
+    ul .menu-item:nth-child(3){
+      width: 100%;
+      margin-left: -100%;
+    }
+    ul .menu-item:nth-child(4){
+      width: 100%;
+      margin-left: -100%;
+    }
+    ul .menu-item:nth-child(5){
+      width: 100%;
+      margin-left: -100%;
+    }
+    ul .menu-item:nth-child(6){
+      width: 100%;
+      margin-left: -100%;
+    }
+    ul .menu-item:nth-child(7){
+      width: 100%;
+      margin-left: -100%;
+    }
+    ul .menu-item:nth-child(8){
+      width: 100%;
+      margin-left: -100%;
+    }
+
+
 
     .menu-toggle:checked ~ ul .menu-item:nth-child(1){
       transform: rotate(0deg) translateX(-140px);

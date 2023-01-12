@@ -82,7 +82,7 @@
     }
 
     .menu-item{
-      position: flex;
+      position: absolute;
       bottom: 0;
       transition: 1s;
       /**working but the code adjusting images on top of eachother (below)
@@ -108,40 +108,7 @@
       z-index: 6;
     }
 
-    ul .menu-item:nth-child(1){
-      width: 100%;
-    }
-    ul .menu-item:nth-child(2){
-      width: 100%;
-      margin-left: -100%;
-    }
-    ul .menu-item:nth-child(3){
-      width: 100%;
-      margin-left: -100%;
-    }
-    ul .menu-item:nth-child(4){
-      width: 100%;
-      margin-left: -100%;
-    }
-    ul .menu-item:nth-child(5){
-      width: 100%;
-      margin-left: -100%;
-    }
-    ul .menu-item:nth-child(6){
-      width: 100%;
-      margin-left: -100%;
-    }
-    ul .menu-item:nth-child(7){
-      width: 100%;
-      margin-left: -100%;
-    }
-    ul .menu-item:nth-child(8){
-      width: 100%;
-      margin-left: -100%;
-    }
-
-
-
+  
     .menu-toggle:checked ~ ul .menu-item:nth-child(1){
       transform: rotate(0deg) translateX(-140px);
     }

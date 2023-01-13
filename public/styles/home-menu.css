@@ -1,0 +1,59 @@
+.menu{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .menu-toggle:checked  ~ .menu{
+    padding: 175px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .Img{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+  }
+
+  .Img a, .Img p{
+    color:#006699;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    display: none;
+  }
+
+  .menu-toggle:checked ~ .menu .Img a, 
+  .menu-toggle:checked ~ .menu .Img p{
+    display: block;
+  }
+
+  .menu-toggle:checked ~ .menu #Img1{
+    transform: translate(-50%, -50%) rotate(0deg) translateX(-140px);
+  }
+  .menu-toggle:checked ~ .menu #Img2{
+    transform: translate(-50%, -50%) rotate(45deg) translateX(-140px) rotate(-45deg);
+  }
+  .menu-toggle:checked ~ .menu #Img3{
+    transform: translate(-50%, -50%) rotate(90deg) translateX(-140px) rotate(-90deg);
+  }
+  .menu-toggle:checked ~ .menu #Img4{
+    transform: translate(-50%, -50%) rotate(135deg) translateX(-140px) rotate(-135deg);
+  }
+  .menu-toggle:checked ~ .menu #Img5{
+    transform: translate(-50%, -50%) rotate(180deg) translateX(-140px) rotate(-180deg);
+  }
+  .menu-toggle:checked ~ .menu #Img6{
+    transform: translate(-50%, -50%) rotate(225deg) translateX(-140px) rotate(-225deg);
+  }
+  .menu-toggle:checked ~ .menu #Img7{
+    transform: translate(-50%, -50%) rotate(270deg) translateX(-140px) rotate(-270deg);
+  }
+  .menu-toggle:checked ~ .menu #Img8{
+    transform: translate(-50%, -50%) rotate(315deg) translateX(-140px) rotate(-315deg);
+  }

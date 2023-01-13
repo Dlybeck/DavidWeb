@@ -71,69 +71,52 @@
       text-align: center;
     }
 
-    .spacer{
-      height: 400px;
-    }
-
-    .menu {
+    .menu{
       position: relative;
-      display: flex;
-      justify-content: center;
+      top: 0;
+      left: 0;
+      padding: 50px;
+      transition: 0.5s ease-in-out;
     }
 
-    .menu-item{
-      position: absolute;
-      bottom: 0;
-      transition: 1s;
-      /**working but the code adjusting images on top of eachother (below)
-      is causing the center to be off screen since all the images are to the left
-      align-self: center;**/
+    .menu-toggle:checked  ~ .menu{
+      padding: 175px;
+      transition: 0.5s ease-in-out;
     }
 
-    .menu-item img{
-      width: 100px;
-      height: 100px;
-    }
-
-    .menu-item a{
-      display: none;
-    }
-
-    .menu-toggle:checked ~ ul .menu-item a{
+    .Img{
       display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.5s ease-in-out;
     }
 
-    .menu-toggle {
-      position: flex;
-      z-index: 6;
+    .menu-toggle:checked ~ .menu #Img1{
+      transform: translate(-50%, -50%) rotate(0deg) translateX(-140px);
     }
-
-  
-    .menu-toggle:checked ~ ul .menu-item:nth-child(1){
-      transform: rotate(0deg) translateX(-140px);
+    .menu-toggle:checked ~ .menu #Img2{
+      transform: translate(-50%, -50%) rotate(45deg) translateX(-140px) rotate(-45deg);
     }
-    .menu-toggle:checked ~ ul .menu-item:nth-child(2){
-      transform: rotate(45deg) translateX(-140px) rotate(-45deg);
+    .menu-toggle:checked ~ .menu #Img3{
+      transform: translate(-50%, -50%) rotate(90deg) translateX(-140px) rotate(-90deg);
     }
-    .menu-toggle:checked ~ ul .menu-item:nth-child(3){
-      transform: rotate(90deg) translateX(-140px) rotate(-90deg);
+    .menu-toggle:checked ~ .menu #Img4{
+      transform: translate(-50%, -50%) rotate(135deg) translateX(-140px) rotate(-135deg);
     }
-    .menu-toggle:checked ~ ul .menu-item:nth-child(4){
-      transform: rotate(135deg) translateX(-140px) rotate(-135deg);
+    .menu-toggle:checked ~ .menu #Img5{
+      transform: translate(-50%, -50%) rotate(180deg) translateX(-140px) rotate(-180deg);
     }
-    .menu-toggle:checked ~ ul .menu-item:nth-child(5){
-      transform: rotate(180deg) translateX(-140px) rotate(-180deg);
+    .menu-toggle:checked ~ .menu #Img6{
+      transform: translate(-50%, -50%) rotate(225deg) translateX(-140px) rotate(-225deg);
     }
-    .menu-toggle:checked ~ ul .menu-item:nth-child(6){
-      transform: rotate(225deg) translateX(-140px) rotate(-225deg);
+    .menu-toggle:checked ~ .menu #Img7{
+      transform: translate(-50%, -50%) rotate(270deg) translateX(-140px) rotate(-270deg);
     }
-    .menu-toggle:checked ~ ul .menu-item:nth-child(7){
-      transform: rotate(270deg) translateX(-140px) rotate(-270deg);
+    .menu-toggle:checked ~ .menu #Img8{
+      transform: translate(-50%, -50%) rotate(315deg) translateX(-140px) rotate(-315deg);
     }
-    .menu-toggle:checked ~ ul .menu-item:nth-child(8){
-      transform: rotate(315deg) translateX(-140px) rotate(-315deg);
-    }
-    
   </style>
   <link rel="stylesheet" href="./styles/transitions.css"/>
 </head> 
@@ -148,55 +131,23 @@
         <ul>
           <li><a href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a></li>
           <li><a href='views/testPage.html' x="2000" y="2000">Test Page</a></li>
-
         </ul>
       </nav>
     </header>
     <div class="container">
-      <div class="spacer"></div>
+      <input type="checkbox" class="menu-toggle">
       <nav class="menu">
-        <input class="menu-toggle" type="checkbox">
-        <label for="menu-toggler"></label>
-        <ul>
-          <li class="menu-item">
-            <img src='img/Arrows/Left.png'>
-            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
-          </li>
-          <li class="menu-item">
-            <img src='img/Arrows/TopLeft.png'>
-            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
-          </li>
-          <li class="menu-item">
-            <img src='img/Arrows/Top.png'>
-            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
-          </li>
-          <li class="menu-item">
-            <img src='img/Arrows/TopRight.png'>
-            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
-          </li>
-          <li class="menu-item">
-            <img src='img/Arrows/Right.png'>
-            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
-          </li>
-          <li class="menu-item">
-            <img src='img/Arrows/BottomRight.png'>
-            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
-          </li>
-          <li class="menu-item">
-            <img src='img/Arrows/Bottom.png'>
-            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
-          </li>
-          <li class="menu-item">
-            <img src='img/Arrows/BottomLeft.png'>
-            <a class="fa fa-tictactoe" href='views/tictactoe.html' x="-2000" y="-2000">Tic Tac Toe</a>
-          </li>
-        </ul>
+        <img src="./img/Arrows/Left.png" class="Img" id="Img1"/>
+        <img src="./img/Arrows/TopLeft.png" class="Img" id="Img2"/>
+        <img src="./img/Arrows/Top.png" class="Img" id="Img3"/>
+        <img src="./img/Arrows/TopRight.png" class="Img" id="Img4"/>
+        <img src="./img/Arrows/Right.png" class="Img" id="Img5"/>
+        <img src="./img/Arrows/BottomRight.png" class="Img" id="Img6"/>
+        <img src="./img/Arrows/Bottom.png" class="Img" id="Img7"/>
+        <img src="./img/Arrows/BottomLeft.png" class="Img" id="Img8"/>
       </nav>
-      <div> 
         <h2>Welcome to My Website</h2>
         <p>Thank you for visiting. You can now play Tic Tac Toe.</p>
-      </div>
-    </div>
     </div>
   </div>
   <script src="./scripts/transitions.js" type="text/javascript"></script>

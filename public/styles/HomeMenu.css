@@ -2,7 +2,7 @@
     position: relative;
     top: 0;
     left: 0;
-    padding: 25px;
+    padding: 35px;
     transition: 0.5s ease-in-out;
   }
   
@@ -14,7 +14,7 @@
   }
 
   .menu-toggle:checked  ~ .menu{
-    padding: 175px;
+    padding: 225px;
     transition: 0.5s ease-in-out;
   }
 
@@ -33,34 +33,40 @@
     bottom: -20px;
     left: 0;
     display: none;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .menu-toggle:checked ~ .menu .Img a, 
   .menu-toggle:checked ~ .menu .Img p{
     display: block;
+    transform: translateX(50);
   }
 
+  .menu-toggle:checked ~ .menu #Img0{
+    transform: translate(-50%, -50%);
+  }
   .menu-toggle:checked ~ .menu #Img1{
-    transform: translate(-50%, -50%) rotate(0deg) translateX(-140px);
+    transform: translate(-50%, -50%) rotate(0deg) translateX(-170px);
   }
   .menu-toggle:checked ~ .menu #Img2{
-    transform: translate(-50%, -50%) rotate(45deg) translateX(-140px) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(45deg) translateX(-170px) rotate(-45deg);
   }
   .menu-toggle:checked ~ .menu #Img3{
-    transform: translate(-50%, -50%) rotate(90deg) translateX(-140px) rotate(-90deg);
+    transform: translate(-50%, -50%) rotate(90deg) translateX(-170px) rotate(-90deg);
   }
   .menu-toggle:checked ~ .menu #Img4{
-    transform: translate(-50%, -50%) rotate(135deg) translateX(-140px) rotate(-135deg);
+    transform: translate(-50%, -50%) rotate(135deg) translateX(-170px) rotate(-135deg);
   }
   .menu-toggle:checked ~ .menu #Img5{
-    transform: translate(-50%, -50%) rotate(180deg) translateX(-140px) rotate(-180deg);
+    transform: translate(-50%, -50%) rotate(180deg) translateX(-170px) rotate(-180deg);
   }
   .menu-toggle:checked ~ .menu #Img6{
-    transform: translate(-50%, -50%) rotate(225deg) translateX(-140px) rotate(-225deg);
+    transform: translate(-50%, -50%) rotate(225deg) translateX(-170px) rotate(-225deg);
   }
   .menu-toggle:checked ~ .menu #Img7{
-    transform: translate(-50%, -50%) rotate(270deg) translateX(-140px) rotate(-270deg);
+    transform: translate(-50%, -50%) rotate(270deg) translateX(-170px) rotate(-270deg);
   }
   .menu-toggle:checked ~ .menu #Img8{
-    transform: translate(-50%, -50%) rotate(315deg) translateX(-140px) rotate(-315deg);
+    transform: translate(-50%, -50%) rotate(315deg) translateX(-170px) rotate(-315deg);
   }

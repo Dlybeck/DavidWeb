@@ -25,10 +25,19 @@
   .Img{
     display: block;
     position: absolute;
+    font-weight: bold;
     left: 50%;
     top: 50%;
+    transition: 0.0s ease-in-out;
     transform: translate(-50%, -50%);
     transition: 0.5s ease-in-out;
+  }
+
+  .Img img{
+    transition: ease-in-out 0.25s;
+  }
+  .Img img:hover{
+    transform: scale(1.25);
   }
 
   .Img p{

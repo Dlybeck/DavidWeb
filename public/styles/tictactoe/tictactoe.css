@@ -1,0 +1,33 @@
+h3{
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    margin: auto;
+    border: 2px solid #333;
+    box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.4);
+    background-color: #B3E5FC; /* Light blue pastel tone */
+  }
+  td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #F8BBD0; /* Pale pink pastel tone */
+  }
+  td:hover {
+    background-color: #f9b3b3; /* Pale red pastel tone */
+  }
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #bfc2e4; /* Light blue pastel tone */
+  }

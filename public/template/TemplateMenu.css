@@ -1,20 +1,11 @@
-.button {
-  text-decoration: none;
-  background-color: #006699;
-  padding: 2px 6px 2px 6px;
-  border-radius: 8px;
-  transition: 0.125s ease-in-out;
-}
-.button:hover {
-  background-color: #014668;
-}
-
 .menu{
     position: relative;
     top: 0;
     left: 0;
-    padding: 35px;
+    padding: 0px;
     transition: 0.5s ease-in-out;
+    opacity: 0;
+    height: 0;
   }
   
   .menu-container{
@@ -25,8 +16,10 @@
   }
 
   .menu-toggle:checked  ~ .menu{
-    padding: 225px;
+    padding: 235px;
     transition: 0.5s ease-in-out;
+    opacity: 1;
+    height: auto;
   }
 
   .Img{
@@ -38,21 +31,19 @@
     transition: 0.5s ease-in-out;
   }
 
-  .Img a, .Img p{
-    color:#ffffff;
+  .Img p{
+    color:black;
     position: absolute;
     white-space: nowrap;
-    bottom: -20px;
+    bottom: -25px;
     left: 0;
     display: none;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  .menu-toggle:checked ~ .menu .Img a, 
   .menu-toggle:checked ~ .menu .Img p{
     display: block;
-    transform: translateX(50);
   }
 
   .menu-toggle:checked ~ .menu #Img0{

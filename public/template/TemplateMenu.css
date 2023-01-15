@@ -48,7 +48,7 @@
     left: 0;
     display: none;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 40%);
   }
 
   .menu-toggle:checked ~ .menu .Img p{

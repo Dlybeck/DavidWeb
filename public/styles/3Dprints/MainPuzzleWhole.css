@@ -9,3 +9,17 @@ model-viewer{
     background-color: #006699;
     border-radius: 40px;
 }
+
+.models a{
+    display: block;
+    color: #006699;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.models a:hover{
+    text-decoration: underline;
+}

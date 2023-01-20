@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>David's Website</title>
+  <link rel="stylesheet" href="/template/template.css">
+  <link rel="stylesheet" href="/template/TemplateMenu.css">
+  <link rel="stylesheet" href="/template/TemplateHamburger.css"/>
+  <link rel="stylesheet" href="/styles/transitions.css"/>
+  <style>
+    body, .transition-page{
+      background-position: 4000px -2000px;
+    }
+  </style>
+</head> 
+<body>
+
+  <div class="transition transition-page is-active"></div>
+
+  <div class="page">
+    <header>
+      <h1 href='/index.html' x="0" y="0" link="true">David's Website</h1>
+    </header>
+    <div class="container"> 
+      <div class="menu-container">
+        <input type="checkbox" class="menu-toggle" id="checkbox">
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div> 
+        <nav class="menu">
+          <div class="Img" id="Img0">
+            <img src="/img/Arrows/SHouse.png" href='/index.html' x="0" y="0" link="true"/>
+            <p>Home</p>
+          </div>
+          <div class="Img" id="Img5">
+            <img src="/img/Arrows/LRight.png" href='/views/education/education.html' x="2000" y="-2000" link="true"/>
+            <p>Education</p>
+          </div>
+        </nav>
+      </div>
+        <h2>College</h2>
+        <p>--Info about college--</p>
+    </div>
+  </div>
+  <script src="/scripts/transitions.js" type="text/javascript"></script>
+</body>
+</html>

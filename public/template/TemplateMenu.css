@@ -44,10 +44,9 @@
     color:black;
     position: absolute;
     white-space: nowrap;
-    bottom: -25px;
+    bottom: -75px;
     left: 0;
     display: none;
-    left: 50%;
     transform: translate(-50%, 40%);
   }
 

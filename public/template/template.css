@@ -19,6 +19,7 @@ body {
   header h1 {
     margin: auto;
     text-align: center;
+    cursor: pointer;
   }
   
   nav ul {
@@ -61,4 +62,30 @@ body {
     margin: 50px;
     margin-top: 0px;
     text-align: center;
+  }
+
+  #warning-message {
+     display: none; 
+  }
+  @media only screen and (orientation:portrait){
+    #warning-message-box { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 50px 50px 50px 50px; 
+      height: 200px;
+      border: 5px solid #006699;
+    }
+    #warning-message{
+      display: block;
+    }
+    .page { 
+      display:none; 
+    }
+  }
+  @media only screen and (orientation:landscape){
+    #warning-message-box { 
+      display:none; 
+    }
   }

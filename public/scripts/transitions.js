@@ -3,14 +3,17 @@ const fadeTimeS = '0.25s';
 const moveTime = 2000;
 const moveTimeS = '2s';
 
+const factor = 20
+const offset = 350
+
 window.onload = () => {
     const transition_el = document.querySelector('.transition');
     const anchors = document.querySelectorAll('[link=true]');
 
     let coords = checkCoords(document.body, "body");
     printCoords(coords, "body")
-    coords = checkCoords(transition_el);
-    printCoords(coords, "transition_el");
+    let coordsPct = checkCoords(transition_el);
+    printCoords(coordsPct, "transition_el");
 
 
     const canvas = document.querySelectorAll('#canvas');
@@ -37,16 +40,28 @@ window.onload = () => {
 
             //if it is a transition
             if(transition_el.classList.contains("transition-page")){
-
-                const ctx = canvas[0].getContext('2d');
-                drawLine(ctx, [100, 100], [100, 300], 'green', 5);
-                console.log("Drew Line?")
-
-                serializeCanvas(canvas[0])
-
                 let x = e.target.getAttribute('x')
                 let y = e.target.getAttribute('y')
                 console.log("going to (" + x + ", " + y + ")")
+
+                //Update map for new location
+                coords[0] = parseInt(coords[0], 10)
+                coords[1] = parseInt(coords[1], 10)
+
+                //initial drawing coords
+                let drawX = offset - (coords[0]/factor)
+                let drawY = offset - (coords[1]/factor)
+                //new drawing coords
+                let drawX2 = offset - (x/factor)
+                let drawY2 = offset - (y/factor)
+
+                console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
+                const ctx = canvas[0].getContext('2d');
+                drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 5);
+                console.log("Drew Line")
+
+                serializeCanvas(canvas[0])
+
                 //wait for fade to happen then start moving background
                 setTimeout(() => {
                     //change to movement trans time
@@ -100,6 +115,5 @@ function deserializeCanvas(canvas) {
     img.onload = function() {
         canvas.getContext("2d").drawImage(img, 0, 0);
     };
-
     img.src = data;
 }

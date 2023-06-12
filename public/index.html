@@ -53,9 +53,16 @@
           </div>
         </nav>
       </div>
-      <canvas id="canvas" height="1000" width="1000"></canvas>
-        <h2>Welcome to My Website!</h2>
-        <p>This website is a project of mine I have been working on. It has slowly been in the making since December 2022, and it almost entirely made from code written by myself. The goal of this website is so be a sort of portfolio where anyone can see anything I've done or am interested in. You can use the navigation menu above to explore some of my projects, interests and more.</p>
+      <div id="canvasWrap">
+        <canvas id="canvas" height="700" width="700"></canvas>
+      </div>
+      <div id="buttonHolder">
+        <button onclick="myFunction()">Reset Map</button>
+      </div>
+      <script> function myFunction() {localStorage.clear(); window.location.reload();} </script>
+
+      <h2>Welcome to My Website!</h2>
+      <p>This website is a project of mine I have been working on. It has slowly been in the making since December 2022, and it almost entirely made from code written by myself. The goal of this website is so be a sort of portfolio where anyone can see anything I've done or am interested in. You can use the navigation menu above to explore some of my projects, interests and more.</p>
     </div>
   </div>
 

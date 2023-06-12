@@ -6,6 +6,9 @@ const moveTimeS = '2s';
 const factor = 20
 const offset = 350
 
+let img = new Image();
+img.src = '/img/Location25.png'
+
 window.onload = () => {
     const transition_el = document.querySelector('.transition');
     const anchors = document.querySelectorAll('[link=true]');
@@ -18,9 +21,11 @@ window.onload = () => {
 
     const canvas = document.querySelectorAll('#canvas');
 
-    console.log("deserializing")
+    coords[0] = parseInt(coords[0], 10)
+    coords[1] = parseInt(coords[1], 10)
+
     deserializeCanvas(canvas[0])
-    console.log("deserialized")
+    canvas[0].getContext('2d').drawImage(img, offset - (coords[0]/factor)-12.5, offset - (coords[1]/factor)-58) //12.5 and 38 are image width and height
 
     setTimeout(() => {
         //set transition state
@@ -44,24 +49,6 @@ window.onload = () => {
                 let y = e.target.getAttribute('y')
                 console.log("going to (" + x + ", " + y + ")")
 
-                //Update map for new location
-                coords[0] = parseInt(coords[0], 10)
-                coords[1] = parseInt(coords[1], 10)
-
-                //initial drawing coords
-                let drawX = offset - (coords[0]/factor)
-                let drawY = offset - (coords[1]/factor)
-                //new drawing coords
-                let drawX2 = offset - (x/factor)
-                let drawY2 = offset - (y/factor)
-
-                console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
-                const ctx = canvas[0].getContext('2d');
-                drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 5);
-                console.log("Drew Line")
-
-                serializeCanvas(canvas[0])
-
                 //wait for fade to happen then start moving background
                 setTimeout(() => {
                     //change to movement trans time
@@ -72,6 +59,23 @@ window.onload = () => {
                     setTimeout(() => {
                         //return to fade trans time
                         transition_el.style.transition = "ease-out " + fadeTimeS;
+
+                        //Update map for new location
+                        //initial drawing coords
+                        let drawX = offset - (x/factor)
+                        let drawY = offset - (y/factor)
+                        //new drawing coords
+                        let drawX2 = offset - (coords[0]/factor)
+                        let drawY2 = offset - (coords[1]/factor)
+                        //draw
+                        console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
+                        const ctx = canvas[0].getContext('2d');
+                        //erase old location marker
+                        canvas[0].getContext('2d').clearRect(offset - (coords[0]/factor)-13, offset - (coords[1]/factor)-58, 26, 38)
+                        //redraw unerased paths
+                        deserializeCanvas(canvas[0])
+                        drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 5);
+                        serializeCanvas(canvas[0])
 
                         window.location.href = target;
                     }, moveTime);

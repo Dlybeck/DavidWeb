@@ -20,14 +20,20 @@ window.onload = () => {
 
 
     const canvas = document.querySelectorAll('#canvas');
+    const ctx = canvas[0].getContext('2d');
+
 
     coords[0] = parseInt(coords[0], 10)
     coords[1] = parseInt(coords[1], 10)
 
     deserializeCanvas(canvas[0])
-    canvas[0].getContext('2d').fillStyle = "#bfbf9f";
-    canvas[0].getContext('2d').fillRect(0, 0, canvas[0].width, canvas[0].height);
-    canvas[0].getContext('2d').drawImage(img, offset - (coords[0]/factor)-12.5, offset - (coords[1]/factor)-58) //12.5 and 38 are image width and height
+
+    ctx.fillStyle = "#bfbf9f";
+    ctx.fillRect(0, 0, canvas[0].width, canvas[0].height);
+    setTimeout(() => {
+        ctx.drawImage(img, offset - (coords[0]/factor)-12.5, offset - (coords[1]/factor)-58) //12.5 and 38 are image width and height
+    }, 250)
+    
 
     setTimeout(() => {
         //set transition state
@@ -69,11 +75,10 @@ window.onload = () => {
                         //new drawing coords
                         let drawX2 = offset - (coords[0]/factor)
                         let drawY2 = offset - (coords[1]/factor)
-                        //draw
-                        console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
-                        const ctx = canvas[0].getContext('2d');
                         //erase old location marker
                         canvas[0].getContext('2d').clearRect(offset - (coords[0]/factor)-13, offset - (coords[1]/factor)-58, 26, 38)
+                        //draw
+                        console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
                         //redraw unerased paths
                         deserializeCanvas(canvas[0])
                         drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 5);

@@ -25,6 +25,8 @@ window.onload = () => {
     coords[1] = parseInt(coords[1], 10)
 
     deserializeCanvas(canvas[0])
+    canvas[0].getContext('2d').fillStyle = "#bfbf9f";
+    canvas[0].getContext('2d').fillRect(0, 0, canvas[0].width, canvas[0].height);
     canvas[0].getContext('2d').drawImage(img, offset - (coords[0]/factor)-12.5, offset - (coords[1]/factor)-58) //12.5 and 38 are image width and height
 
     setTimeout(() => {

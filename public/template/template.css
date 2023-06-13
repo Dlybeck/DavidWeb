@@ -69,14 +69,25 @@ body {
   #canvas {
     display: block;
     margin: 0 auto;
+    z-index: 1;
   }
 
   #canvasWrap {
     display: block;
+    z-index: 1;
   }
+
 
   #buttonHolder {
     text-align: center;
+  }
+
+  #map {
+    display: block;
+    float: right;
+    margin-right: 10px;
+    margin-left: 100px;
+    z-index: 10;
   }
 
   #warning-message {

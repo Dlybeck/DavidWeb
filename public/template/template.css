@@ -40,6 +40,8 @@ body {
   }
   
   .container {
+    z-index: 1;
+    position: relative;
     margin: 0px, 0px;
     padding: 20px;
     background-color: #fff;
@@ -67,14 +69,19 @@ body {
   }
 
   #canvas {
+    position: absolute;
     display: block;
     margin: 0 auto;
-    z-index: 1;
+    z-index: 10;
   }
 
   #canvasWrap {
-    display: block;
-    z-index: 1;
+    opacity: 0;
+    position: relative;
+    transition: opacity 1s;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 10;
   }
 
 
@@ -93,6 +100,8 @@ body {
   #warning-message {
      display: none; 
   }
+
+  /*for forcing landscape mode*/
   @media only screen and (orientation:portrait){
     #warning-message-box { 
       display: flex;

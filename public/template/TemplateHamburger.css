@@ -1,10 +1,10 @@
 .container #checkbox {
     position: absolute;
     display: block;
-    height: 32px;
-    width: 32px;
-    top: 20px;
-    left: 20px;
+    height: 40px;
+    width: 40px;
+    top: 16px;
+    left: 16px;
     z-index: 5;
     opacity: 0;
     cursor: pointer;

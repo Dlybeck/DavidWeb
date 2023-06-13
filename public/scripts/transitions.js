@@ -81,7 +81,9 @@ window.onload = () => {
                         console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
                         //redraw unerased paths
                         deserializeCanvas(canvas[0])
-                        drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 5);
+                        if(x!=0 || y!=0){
+                            drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 5);
+                        }
                         serializeCanvas(canvas[0])
 
                         window.location.href = target;

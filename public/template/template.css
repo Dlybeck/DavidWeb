@@ -69,16 +69,12 @@ body {
   }
 
   #canvas {
-    position: absolute;
     display: block;
     margin: 0 auto;
     z-index: 10;
   }
 
   #canvasWrap {
-    opacity: 0;
-    position: relative;
-    transition: opacity 1s;
     margin-right: auto;
     margin-left: auto;
     z-index: 10;
@@ -90,9 +86,8 @@ body {
   }
 
   #map {
-    position: absolute;
     display: block;
-    margin-left: 95%;
+    margin-left: 80%;
     margin-right: 10px;
     z-index: 10;
   }

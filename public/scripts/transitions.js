@@ -35,7 +35,7 @@ window.onload = () => {
         ctx.drawImage(img, offset - (coords[0]/factor)-12.5, offset - (coords[1]/factor)-58) //12.5 and 38 are image width and height
         ctx.font = "15px serif"
         ctx.fillStyle = "black"
-        ctx.fillText(location, offset - (coords[0]/factor) + 10, offset - (coords[1]/factor))
+        ctx.fillText(location, offset - (coords[0]/factor) + 10, offset - (coords[1]/factor - 5))
     }, 250)
     
 

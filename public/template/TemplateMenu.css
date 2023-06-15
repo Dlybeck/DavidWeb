@@ -1,4 +1,4 @@
-.menu{
+#canvasWrap, .menu{
     position: relative;
     top: 0;
     left: 0;
@@ -6,6 +6,10 @@
     transition: 0.5s ease-in-out;
     opacity: 0;
     height: 0;
+  }
+
+  .menu{
+    z-index: 10;
   }
   
   .menu-container{
@@ -15,12 +19,19 @@
     transition: 0.5s ease-in-out;
   }
 
-  .menu-toggle:checked  ~ .menu{
-    padding: 235px;
+  .menu-toggle:checked  ~ #canvasWrap{
     transition: 0.5s ease-in-out;
     opacity: 1;
-    height: auto;
+    top: -350px
   }
+
+  .menu-toggle:checked:not(#canvasWrap)  ~ .menu{
+    padding: 175px;
+    height: auto;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+  }
+
 
   .Img{
     display: block;
@@ -31,6 +42,7 @@
     transition: 0.0s ease-in-out;
     transform: translate(-50%, -50%);
     transition: 0.5s ease-in-out;
+    z-index: 10;
   }
 
   .Img img{

@@ -3,8 +3,8 @@ const fadeTimeS = '0.25s';
 const moveTime = 2000;
 const moveTimeS = '2s';
 
-const factor = 20
-const offset = 350
+const factor = 30
+const offset = 200
 
 let img = new Image();
 img.src = '/img/Location25.png'

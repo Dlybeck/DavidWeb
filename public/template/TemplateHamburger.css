@@ -21,6 +21,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: ease-in-out 0.25s;
+  }
+
+  .menu-toggle:hover ~.hamburger-lines {
+    transform: scale(1.1);
   }
   
   .container .hamburger-lines .line {

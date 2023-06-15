@@ -99,6 +99,14 @@ body {
     z-index: 10;
   }
 
+  .homeIcon{
+    transition: ease-in-out 0.25s;
+  }
+
+  .homeIcon:hover {
+    transform: scale(1.1);
+  }
+
   #warning-message {
      display: none; 
   }

@@ -32,10 +32,17 @@ window.onload = () => {
     ctx.fillRect(0, 0, canvas[0].width, canvas[0].height);
     let location = document.querySelector("#location").innerHTML
     setTimeout(() => {
-        ctx.drawImage(img, offset - (coords[0]/factor)-12.5, offset - (coords[1]/factor)-58) //12.5 and 38 are image width and height
+        //location marker
+        ctx.drawImage(img, offset - (coords[0]/factor)-12.5, offset - (coords[1]/factor)-58) //12.5 and 38 are image width and height 
+        //location name
         ctx.font = "15px serif"
         ctx.fillStyle = "black"
         ctx.fillText(location, offset - (coords[0]/factor) + 10, offset - (coords[1]/factor - 5))
+
+        //dot
+        ctx.beginPath();
+        ctx.arc( offset - (coords[0]/factor), offset - (coords[1]/factor), 5, 0, 2 * Math.PI);
+        ctx.fill();
     }, 250)
     
 

@@ -42,7 +42,6 @@ body {
   .container {
     z-index: 1;
     position: relative;
-    margin: 0px, 0px;
     padding: 20px;
     background-color: #fff;
     border-radius: 0px 0px 50px 50px;
@@ -71,13 +70,16 @@ body {
   #canvas {
     display: block;
     margin: 0 auto;
-    z-index: 0;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 30px;
+    border-color: black;
+
   }
 
   #canvasWrap:not(#button) {
     margin-right: auto;
     margin-left: auto;
-    z-index: 0;
   }
 
   #buttonHolder {
@@ -85,7 +87,9 @@ body {
   }
 
   #button {
-    z-index: 20;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
   }
 
   #home {

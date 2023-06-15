@@ -30,8 +30,12 @@ window.onload = () => {
 
     ctx.fillStyle = "#bfbf9f";
     ctx.fillRect(0, 0, canvas[0].width, canvas[0].height);
+    let location = document.querySelector("#location").innerHTML
     setTimeout(() => {
         ctx.drawImage(img, offset - (coords[0]/factor)-12.5, offset - (coords[1]/factor)-58) //12.5 and 38 are image width and height
+        ctx.font = "15px serif"
+        ctx.fillStyle = "black"
+        ctx.fillText(location, offset - (coords[0]/factor) + 10, offset - (coords[1]/factor))
     }, 250)
     
 
@@ -76,7 +80,7 @@ window.onload = () => {
                         let drawX2 = offset - (coords[0]/factor)
                         let drawY2 = offset - (coords[1]/factor)
                         //erase old location marker
-                        canvas[0].getContext('2d').clearRect(offset - (coords[0]/factor)-13, offset - (coords[1]/factor)-58, 26, 38)
+                        ctx.clearRect(offset - (coords[0]/factor)-13, offset - (coords[1]/factor)-58, 26, 38)
                         //draw
                         console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
                         //redraw unerased paths

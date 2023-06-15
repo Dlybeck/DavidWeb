@@ -1,11 +1,10 @@
 #canvasWrap, .menu{
     position: relative;
-    top: 0;
-    left: 0;
     padding: 0px;
     transition: 0.5s ease-in-out;
     opacity: 0;
     height: 0;
+    z-index: -10;
   }
 
   .menu{
@@ -14,18 +13,18 @@
   
   .menu-container{
     position: relative;
-    top: 0;
-    left: 0;
-    transition: 0.5s ease-in-out;
   }
 
   .menu-toggle:checked  ~ #canvasWrap{
+    display: block;
     transition: 0.5s ease-in-out;
     opacity: 1;
-    top: -490px
+    top: -490px;
+    z-index: 10;
   }
 
   .menu-toggle:checked:not(#canvasWrap)  ~ .menu{
+    display: block;
     padding: 175px;
     height: 225px;
     opacity: 1;

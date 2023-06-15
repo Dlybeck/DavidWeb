@@ -74,18 +74,21 @@ body {
     z-index: 0;
   }
 
-  #canvasWrap {
+  #canvasWrap:not(#button) {
     margin-right: auto;
     margin-left: auto;
     z-index: 0;
   }
 
-
   #buttonHolder {
     text-align: center;
   }
 
-  #map {
+  #button {
+    z-index: 20;
+  }
+
+  #home {
     display: block;
     margin-left: 80%;
     margin-right: 10px;

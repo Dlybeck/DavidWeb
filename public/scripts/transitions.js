@@ -47,9 +47,9 @@ window.onpageshow = () => {
         setTimeout(() => {
             //Current Location
             //border
-            ctx.lineWidth = 8
+            ctx.lineWidth = 6
             ctx.fillStyle = "#006699"
-            ctx.arc( offset - (coords[0]/factor), offset - (coords[1]/factor), 5, 0, 2 * Math.PI);
+            ctx.arc( offset - (coords[0]/factor), offset - (coords[1]/factor), 6, 0, 2 * Math.PI);
             ctx.stroke();
             ctx.fill();
 

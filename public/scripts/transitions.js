@@ -43,12 +43,16 @@ window.onpageshow = () => {
 
         serializeCanvas(canvas[0])
 
+        //Current Location Stuff
         setTimeout(() => {
             //Current Location
+            //border
+            ctx.lineWidth = 8
             ctx.fillStyle = "#006699"
-            ctx.beginPath();
-            ctx.arc( offset - (coords[0]/factor), offset - (coords[1]/factor), 8, 0, 2 * Math.PI);
+            ctx.arc( offset - (coords[0]/factor), offset - (coords[1]/factor), 5, 0, 2 * Math.PI);
+            ctx.stroke();
             ctx.fill();
+
             ctx.fillStyle = "black"
         }, 50)
 
@@ -99,17 +103,15 @@ window.onpageshow = () => {
 
                         // Load in saved Map
                         deserializeCanvas(canvas[0])
-                        canvas = document.querySelectorAll('#canvas');
-                        ctx = canvas[0].getContext('2d');
                         setTimeout(() => {
                             //if jumping back to home, don't draw line
                             if(x!=0 || y!=0){
                                 console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
-                                drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 5);
+                                drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 3);
                             }
                             serializeCanvas(canvas[0])
                             window.location.href = target;
-                        }, 2000)
+                        }, 50)
                     }, moveTime);
                 }, fadeTime);
             } 

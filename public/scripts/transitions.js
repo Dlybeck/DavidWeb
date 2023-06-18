@@ -19,8 +19,8 @@ window.onpageshow = () => {
     printCoords(coordsPct, "transition_el");
 
 
-    const canvas = document.querySelectorAll('#canvas');
-    const ctx = canvas[0].getContext('2d');
+    let canvas = document.querySelectorAll('#canvas');
+    let ctx = canvas[0].getContext('2d');
 
 
     coords[0] = parseInt(coords[0], 10)
@@ -32,18 +32,27 @@ window.onpageshow = () => {
     ctx.fillRect(0, 0, canvas[0].width, canvas[0].height);
     let location = document.querySelector("#location").innerHTML
     setTimeout(() => {
-        //location marker
-        ctx.drawImage(img, offset - (coords[0]/factor)-12.5, offset - (coords[1]/factor)-58) //12.5 and 38 are image width and height 
         //location name
         ctx.font = "12px serif"
         ctx.fillStyle = "black"
         ctx.fillText(location, offset - (coords[0]/factor) + 10, offset - (coords[1]/factor - 5))
-
         //dot
         ctx.beginPath();
         ctx.arc( offset - (coords[0]/factor), offset - (coords[1]/factor), 5, 0, 2 * Math.PI);
         ctx.fill();
-    }, 250)
+
+        serializeCanvas(canvas[0])
+
+        setTimeout(() => {
+            //Current Location
+            ctx.fillStyle = "#006699"
+            ctx.beginPath();
+            ctx.arc( offset - (coords[0]/factor), offset - (coords[1]/factor), 8, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.fillStyle = "black"
+        }, 50)
+
+    }, 50)
     
 
     setTimeout(() => {
@@ -85,18 +94,22 @@ window.onpageshow = () => {
                         //new drawing coords
                         let drawX2 = offset - (coords[0]/factor)
                         let drawY2 = offset - (coords[1]/factor)
-                        //erase old location marker
-                        ctx.clearRect(offset - (coords[0]/factor)-13, offset - (coords[1]/factor)-58, 26, 38)
-                        //draw
-                        console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
-                        //redraw unerased paths
-                        deserializeCanvas(canvas[0])
-                        if(x!=0 || y!=0){
-                            drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 5);
-                        }
-                        serializeCanvas(canvas[0])
+                        //erase Canvas
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                        window.location.href = target;
+                        // Load in saved Map
+                        deserializeCanvas(canvas[0])
+                        canvas = document.querySelectorAll('#canvas');
+                        ctx = canvas[0].getContext('2d');
+                        setTimeout(() => {
+                            //if jumping back to home, don't draw line
+                            if(x!=0 || y!=0){
+                                console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
+                                drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 5);
+                            }
+                            serializeCanvas(canvas[0])
+                            window.location.href = target;
+                        }, 2000)
                     }, moveTime);
                 }, fadeTime);
             } 

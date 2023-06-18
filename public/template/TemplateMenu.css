@@ -66,26 +66,26 @@
   }
 
   .menu-toggle:checked ~ .menu #Img1{
-    transform: translate(-50%, -50%) rotate(0deg) translateX(-350px);
+    transform: translate(-50%, -50%) rotate(0deg) translateX(-370px);
   }
   .menu-toggle:checked ~ .menu #Img2{
-    transform: translate(-50%, -50%) rotate(45deg) translateX(-350px) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(45deg) translateX(-370px) rotate(-45deg);
   }
   .menu-toggle:checked ~ .menu #Img3{
-    transform: translate(-50%, -50%) rotate(90deg) translateX(-350px) rotate(-90deg);
+    transform: translate(-50%, -50%) rotate(90deg) translateX(-370px) rotate(-90deg);
   }
   .menu-toggle:checked ~ .menu #Img4{
-    transform: translate(-50%, -50%) rotate(135deg) translateX(-350px) rotate(-135deg);
+    transform: translate(-50%, -50%) rotate(135deg) translateX(-370px) rotate(-135deg);
   }
   .menu-toggle:checked ~ .menu #Img5{
-    transform: translate(-50%, -50%) rotate(180deg) translateX(-350px) rotate(-180deg);
+    transform: translate(-50%, -50%) rotate(180deg) translateX(-370px) rotate(-180deg);
   }
   .menu-toggle:checked ~ .menu #Img6{
-    transform: translate(-50%, -50%) rotate(225deg) translateX(-350px) rotate(-225deg);
+    transform: translate(-50%, -50%) rotate(225deg) translateX(-370px) rotate(-225deg);
   }
   .menu-toggle:checked ~ .menu #Img7{
-    transform: translate(-50%, -50%) rotate(270deg) translateX(-350px) rotate(-270deg);
+    transform: translate(-50%, -50%) rotate(270deg) translateX(-370px) rotate(-270deg);
   }
   .menu-toggle:checked ~ .menu #Img8{
-    transform: translate(-50%, -50%) rotate(315deg) translateX(-350px) rotate(-315deg);
+    transform: translate(-50%, -50%) rotate(315deg) translateX(-370px) rotate(-315deg);
   }

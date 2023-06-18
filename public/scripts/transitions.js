@@ -3,13 +3,13 @@ const fadeTimeS = '0.25s';
 const moveTime = 2000;
 const moveTimeS = '2s';
 
-const factor = 30
+const factor = 50
 const offset = 200
 
 let img = new Image();
 img.src = '/img/Location25.png'
 
-window.onload = () => {
+window.onpageshow = () => {
     const transition_el = document.querySelector('.transition');
     const anchors = document.querySelectorAll('[link=true]');
 
@@ -35,7 +35,7 @@ window.onload = () => {
         //location marker
         ctx.drawImage(img, offset - (coords[0]/factor)-12.5, offset - (coords[1]/factor)-58) //12.5 and 38 are image width and height 
         //location name
-        ctx.font = "15px serif"
+        ctx.font = "12px serif"
         ctx.fillStyle = "black"
         ctx.fillText(location, offset - (coords[0]/factor) + 10, offset - (coords[1]/factor - 5))
 
@@ -60,7 +60,6 @@ window.onload = () => {
             let target = e.target.getAttribute('href');
             //set transition state
             transition_el.classList.add('is-active');
-
 
             //if it is a transition
             if(transition_el.classList.contains("transition-page")){

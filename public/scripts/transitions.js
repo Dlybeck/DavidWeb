@@ -104,8 +104,8 @@ window.onpageshow = () => {
                         // Load in saved Map
                         deserializeCanvas(canvas[0])
                         setTimeout(() => {
-                            //if jumping back to home, don't draw line
-                            if(x!=0 || y!=0){
+                            //if jumping back to home (or tictactoe), don't draw line
+                            if(!((x==0 && y==0) || (x==0 && y==8000))){
                                 console.log("Drawing from [" + (drawX) + ", " + (drawY) + "] to [" + (drawX2) + ", " + (drawY2) + "]")
                                 drawLine(ctx, [drawX, drawY], [drawX2, drawY2], 'black', 3);
                             }

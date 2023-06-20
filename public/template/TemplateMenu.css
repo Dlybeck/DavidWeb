@@ -72,7 +72,7 @@
     transform: translate(-50%, -50%) rotate(45deg) translateX(-370px) rotate(-45deg);
   }
   .menu-toggle:checked ~ .menu #Img3{
-    transform: translate(-50%, -50%) rotate(90deg) translateX(-370px) rotate(-90deg);
+    transform: translate(-50%, -50%) rotate(90deg) translateX(-300px) rotate(-90deg);
   }
   .menu-toggle:checked ~ .menu #Img4{
     transform: translate(-50%, -50%) rotate(135deg) translateX(-370px) rotate(-135deg);

@@ -65,6 +65,8 @@ body {
     margin: 50px;
     margin-top: 0px;
     text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   #canvas {

@@ -139,6 +139,7 @@ body {
     width: 75%;
     height: 75%; 
     object-fit: contain;
+    border-radius: 15px;
   }
 
   #warning-message {

@@ -75,6 +75,25 @@ body {
     text-align: center;
   }
 
+  dl {
+    margin-left: 32%;
+    margin-right: 32%;
+    text-align: left;
+  }
+
+  dt {
+    text-align: center;
+  }
+
+  .link {
+    text-decoration-color: blue;
+    text-decoration: underline;
+  }
+  
+  .link:hover {
+    text-decoration-color: darkblue;
+  }
+
   #canvas {
     display: block;
     margin: 0 auto;
@@ -133,6 +152,11 @@ body {
   
   #topBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  img {
+    object-fit: contain;
+    border-radius: 15px;
   }
 
   .media { 

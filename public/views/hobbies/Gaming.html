@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/styles/transitions.css"/>
   <style>
     body, .transition-page{
-      background-position: -4000px 0px;
+      background-position: 0px 4000px;
     }
   </style>
 </head> 
@@ -24,7 +24,7 @@
     </header>
     <div class="container"> 
       <div class="menu-container">
-        <input type="checkbox" class="menu-toggle" id="checkbox" checked>
+        <input type="checkbox" class="menu-toggle" id="checkbox">
         <div class="hamburger-lines">
           <span class="line line1"></span>
           <span class="line line2"></span>
@@ -34,10 +34,10 @@
           <img id="home" class="homeIcon" src="/img/Home60.png"  href='/home.html' x="0" y="0" link="true">
         </div>
         <nav class="menu">
-          <div class="Img" id="Img2">
-            <img src="/img/Arrows/LTopLeft.png" href='\views\projects\projects.html' x="-2000" y="2000" link="true"/>
-            <p>Projects</p>
-          </div>
+          <!--<div class="Img" id="Img2">
+            <img src="/img/Arrows/LTopLeft.png" href='/home.html' x="0" y="0" link="true"/>
+            <p>Home</p>
+          </div>-->
           <!--<div class="Img" id="Img4">
             <img src="/img/Arrows/LTopRight.png" href='/home.html' x="0" y="0" link="true"/>
             <p>Home</p>
@@ -46,17 +46,37 @@
             <img src="/img/Arrows/LBottomRight.png" href='/home.html' x="0" y="0" link="true"/>
             <p>Home</p>
           </div>-->
-          <!--<div class="Img" id="Img8">
-            <img src="/img/Arrows/LBottomLeft.png" href='/home.html' x="0" y="0" link="true"/>
-            <p>Home</p>
-          </div>-->
+          <div class="Img" id="Img8">
+            <img src="/img/Arrows/LBottomLeft.png" href='\views\hobbies\hobbies.html' x="2000" y="2000" link="true"/>
+            <p>Hobbies</p>
+          </div>
         </nav>
         <div id="canvasWrap" >
           <canvas id="canvas" height="400" width="400"></canvas>
         </div>
       </div>
-      <h2 id="location">Programs</h2>
-      <p>Various programs I've made </p>
+      <h2 id="location">Gaming</h2>
+      <p>When I have free time, video games are another thing I like to do. I'm not much of a "grinder" on games so I end of cycling through a lot of games. So here's a list of games I've really enjoyed playing:
+        <br>
+        <br>
+        <img class="game" src="\img\Gaming\Cyberpunk.png">
+        <img class="game" src="/img/Gaming/HighOnLife.jpg">
+        <img class="game" src="/img/Gaming/MKWii.png">
+        <img class="game" src="/img/Gaming/Subnautica.png">
+        <img class="game" src="/img/Gaming/SubnauticaBZ.png">
+        <img class="game" src="/img/Gaming/SoT.png">
+        <img class="game" src="/img/Gaming/Minecraft.jpg">
+        <img class="game" src="\img\Gaming\Apex.png">
+        <img class="game" src="/img/Gaming/NMS.png">
+        <img class="game" src="/img/Gaming/Valorant.png">
+        <img class="game" src="/img/Gaming/Portal.png">
+        <img class="game" src="/img/Gaming/Portal2.png">
+        <img class="game" src="/img/Gaming/Firewatch.png">
+        <img class="game" src="/img/Gaming/Titanfall.png">
+        <img class="game" src="/img/Gaming/Titanfall2.jpg">
+        <img class="game" src="/img/Gaming/OuterWilds.png">
+        <img class="game" src="/img/Gaming/road96.jpg">
+      </p>
 
       <button onclick="toTop()" id="topBtn" title="Go to top">Top</button>
     </div>

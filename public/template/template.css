@@ -166,6 +166,13 @@ body {
     border-radius: 15px;
   }
 
+  iframe { 
+    aspect-ratio: 2/1;
+    width: 100%; 
+    object-fit: contain;
+    border-radius: 15px;
+  }
+
   .game {
     height: 350px;
     width: auto;

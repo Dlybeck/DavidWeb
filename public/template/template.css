@@ -173,6 +173,10 @@ body {
     border-radius: 15px;
   }
 
+  .code {
+    aspect-ratio: 3/2;
+  }
+
   .game {
     height: 350px;
     width: auto;

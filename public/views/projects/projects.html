@@ -109,6 +109,7 @@
         const team2 = document.getElementById("team2").value;
         const prediction = data[team1][team2] || data[team2][team1];
         const resultDiv = document.getElementById("result");
+        resultDiv.style.display = "block";
         resultDiv.textContent = prediction || "I can't predict this matchup.";
     }
   </script>

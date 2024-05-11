@@ -136,21 +136,37 @@ body {
 
   #topBtn {
     display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 50px; /* Place the button at the bottom of the page */
-    right: 50px; /* Place the button 30px from the right */
+    position: fixed;
+    bottom: 50px; /* Place the button at the bottom right of the page */
+    right: 50px;
     z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #006699; /* Set a background color */
-    color: white; /* Text color */
+    border: none;
+    outline: none;
+    background-color: #006699;
+    color: white;
     cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    padding: 15px; 
+    border-radius: 10px;
+    font-size: 18px;
   }
   
   #topBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  #predictBtn {
+    z-index: 99; /* Make sure it does not overlap */
+    border: none;
+    outline: none;
+    background-color: #006699;
+    color: white;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; 
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  #predictBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
 

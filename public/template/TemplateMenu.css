@@ -61,6 +61,10 @@
     transform: translate(-50%, 40%);
   }
 
+  .menu-toggle:not(:checked) ~ .menu .Img img {
+    display: none;
+  }
+
   .menu-toggle:checked ~ .menu .Img p{
     display: block;
   }

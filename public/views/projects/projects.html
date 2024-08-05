@@ -69,12 +69,14 @@
             <!-- Team options are automatically populated -->
         </select>
         <button onclick="getPrediction()" id="predictBtn">Predict</button>
+        <h4>(Data is only up to date through May 2024)</h4>
         <div id="result">Select two teams above to make a prediction!</div>
-        <p>This was a partner project I worked on starting April 28th. It is a recurrent neural network, trained on a custom made data set of NBA stats.
+        <p>This was a partner project I worked on starting April 28th. It is a convolutional neural network, trained on a custom made data set of NBA stats.
           This specific model was created using pytorch, however we also made a very similar version with tensorflow. From our testing it is pretty good at
-          predicting the correct win/loss outcome of a match, however as expected it has a bit of trouble with the specific point differential prediction.
+          predicting the correct win/loss outcome of a match, however as expected it has a bit of trouble with the specific point differential prediction 
+          (as expected since this is a tough problem).
           <br><br>
-          As of May 18 it is 100% correct on the current outcomes for the 2024 NBA playoffs, and appears to have reasonable predictions for upcoming matches.
+          This AI predicted the 2024 NBA Playoffs with high accuracy only making 2 mistakes, while predicting multiple upsets
           <br><br>
           Check out the project with full documentation here:
           <br>
